@@ -1,4 +1,4 @@
 # TicTacToeGame
 _____________________________________
-Making tic ta toe with Java :coffee:
+Making tic tac toe with Java :coffee:
 _____________________________________
