@@ -2,6 +2,17 @@ package tictactoe;
 
 public class TicTacToe {
     public static void main(String[] args){
-        char[][] gameBoard = {{}, {}, {}};
+        char[][] game_board = {{' ', '|', ' ', '|', ' '},
+                              {'-', '+', '-', '+', '-'},
+                              {' ', '|', ' ', '|', ' '},
+                              {'-', '+', '-', '+', '-'},
+                              {' ', '|', ' ', '|', ' '}};
+
+        for(char[] row : game_board){
+            for(char i : row){
+                System.out.print(i);
+            }
+            System.out.println();
+        }
     }
 }
