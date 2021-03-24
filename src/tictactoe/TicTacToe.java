@@ -13,6 +13,10 @@ public class TicTacToe {
         printGameBoard(game_board);
 
         Scanner scan = new Scanner(System.in);
+        System.out.println("Enter your placement (1-9):");
+        int pos = scan.nextInt();
+
+        System.out.println(pos);
     }
 
     public static void printGameBoard(char[][] game_board){
