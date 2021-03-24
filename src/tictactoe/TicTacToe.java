@@ -1,5 +1,7 @@
 package tictactoe;
 
+import java.util.Scanner;
+
 public class TicTacToe {
     public static void main(String[] args){
         char[][] game_board = {{' ', '|', ' ', '|', ' '},
@@ -9,6 +11,8 @@ public class TicTacToe {
                               {' ', '|', ' ', '|', ' '}};
 
         printGameBoard(game_board);
+
+        Scanner scan = new Scanner(System.in);
     }
 
     public static void printGameBoard(char[][] game_board){
