@@ -17,6 +17,11 @@ public class TicTacToe {
         int pos = scan.nextInt();
 
         System.out.println(pos);
+
+        switch(pos){
+            case 1:
+                game_board[0][0] = 'X';
+        }
     }
 
     public static void printGameBoard(char[][] game_board){
