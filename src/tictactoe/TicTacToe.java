@@ -21,6 +21,31 @@ public class TicTacToe {
         switch(pos){
             case 1:
                 game_board[0][0] = 'X';
+                break;
+            case 2:
+                game_board[0][2] = 'X';
+                break;
+            case 3:
+                game_board[0][4] = 'X';
+                break;
+            case 4:
+                game_board[2][0] = 'X';
+                break;
+            case 5:
+                game_board[2][2] = 'X';
+                break;
+            case 6:
+                game_board[2][4] = 'X';
+                break;
+            case 7:
+                game_board[4][0] = 'X';
+                break;
+            case 8:
+                game_board[4][2] = 'X';
+                break;
+            case 9:
+                game_board[4][4] = 'X';
+                break;
         }
     }
 
