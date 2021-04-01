@@ -4,6 +4,7 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/FinalProject" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/NetworkingPortfolio1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/RESTful-chat-app" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/SnakeGame" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/computer-configuration-store" vcs="Git" />
   </component>

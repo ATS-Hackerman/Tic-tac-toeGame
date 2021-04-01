@@ -31,42 +31,42 @@ public class TicTacToe {
     }
 
     public static void placePiece(char[][] game_board, int pos, String user){
-        char symbol = 'X';
+        char symbol = ' ';
 
         if(user.equals("player")){
             symbol = 'X';
         }
-        else{
+        else if(user.equals("cpu")){
             symbol = 'O';
         }
 
         switch(pos){
             case 1:
-                game_board[0][0] = 'X';
+                game_board[0][0] = symbol;
                 break;
             case 2:
-                game_board[0][2] = 'X';
+                game_board[0][2] = symbol;
                 break;
             case 3:
-                game_board[0][4] = 'X';
+                game_board[0][4] = symbol;
                 break;
             case 4:
-                game_board[2][0] = 'X';
+                game_board[2][0] = symbol;
                 break;
             case 5:
-                game_board[2][2] = 'X';
+                game_board[2][2] = symbol;
                 break;
             case 6:
-                game_board[2][4] = 'X';
+                game_board[2][4] = symbol;
                 break;
             case 7:
-                game_board[4][0] = 'X';
+                game_board[4][0] = symbol;
                 break;
             case 8:
-                game_board[4][2] = 'X';
+                game_board[4][2] = symbol;
                 break;
             case 9:
-                game_board[4][4] = 'X';
+                game_board[4][4] = symbol;
                 break;
         }
     }
