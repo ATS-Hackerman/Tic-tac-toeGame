@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class TicTacToe {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         char[][] game_board = {{' ', '|', ' ', '|', ' '},
                               {'-', '+', '-', '+', '-'},
                               {' ', '|', ' ', '|', ' '},
@@ -14,40 +14,42 @@ public class TicTacToe {
         printGameBoard(game_board);
 
         Scanner scan = new Scanner(System.in);
-        System.out.println("Enter your placement (1-9):");
-        int playerPos = scan.nextInt();
 
-        //Player marks a spot
-        placePiece(game_board, playerPos, "player");
-        //Computer marks a random spot
-        Random random = new Random();
-        int cpuPos = random.nextInt(9) + 1;
-        placePiece(game_board, cpuPos, "cpu");
+        while(true) {
+            System.out.println("Enter your placement (1-9):");
+            int playerPos = scan.nextInt();
 
-        printGameBoard(game_board);
+            //Player marks a spot
+            placePiece(game_board, playerPos, "player");
+            //Computer marks a random spot
+            Random random = new Random();
+            int cpuPos = random.nextInt(9) + 1;
+            placePiece(game_board, cpuPos, "cpu");
 
+            printGameBoard(game_board);
+        }
     }
 
-    public static void printGameBoard(char[][] game_board){
-        for(char[] row : game_board){
-            for(char i : row){
+    public static void printGameBoard(char[][] game_board) {
+        for(char[] row : game_board) {
+            for(char i : row) {
                 System.out.print(i);
             }
             System.out.println();
         }
     }
 
-    public static void placePiece(char[][] game_board, int pos, String user){
+    public static void placePiece(char[][] game_board, int pos, String user) {
         char symbol = ' ';
 
-        if(user.equals("player")){
+        if(user.equals("player")) {
             symbol = 'X';
         }
-        else if(user.equals("cpu")){
+        else if(user.equals("cpu")) {
             symbol = 'O';
         }
 
-        switch(pos){
+        switch(pos) {
             case 1:
                 game_board[0][0] = symbol;
                 break;
