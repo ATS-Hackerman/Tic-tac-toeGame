@@ -34,6 +34,8 @@ public class TicTacToe {
             placeMark(game_board, cpu_mark, "cpu");
 
             printGameBoard(game_board);
+
+            checkWinner();
         }
     }
 
@@ -117,8 +119,15 @@ public class TicTacToe {
         win_conditions.add(diagonal1);
         win_conditions.add(diagonal2);
 
+        //Loops through conditions
         for(List l : win_conditions) {
-
+            if(player_marks.containsAll(l)) {
+                return "You won! Congratulations!";
+            } else if(cpu_marks.containsAll(l)) {
+                return "You lost. Try harder";
+            } else if(player_marks.size() + cpu_marks.size() == 9){
+                return "The cat wins! She's a sly one.";
+            }
         }
 
         return "";
