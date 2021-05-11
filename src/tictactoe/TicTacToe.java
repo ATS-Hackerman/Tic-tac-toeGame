@@ -4,10 +4,12 @@ import java.util.*;
 
 public class TicTacToe {
 
-    static ArrayList<Integer> player_positions = new ArrayList<Integer>();
-    static ArrayList<Integer> cpu_positions = new ArrayList<Integer>();
+    //Lists current marks made on the board
+    static ArrayList<Integer> player_marks = new ArrayList<Integer>();
+    static ArrayList<Integer> cpu_marks = new ArrayList<Integer>();
 
     public static void main(String[] args) {
+        //Draws the game board
         char[][] game_board = {{' ', '|', ' ', '|', ' '},
                               {'-', '+', '-', '+', '-'},
                               {' ', '|', ' ', '|', ' '},
@@ -16,23 +18,26 @@ public class TicTacToe {
 
         printGameBoard(game_board);
 
+        //Game listens
         Scanner scan = new Scanner(System.in);
 
+        //Loops input from player and decides cpu moves
         while(true) {
             System.out.println("Enter your placement (1-9):");
-            int player_pos = scan.nextInt();
+            int player_mark = scan.nextInt();
 
             //Player marks a spot
-            placePiece(game_board, player_pos, "player");
+            placeMark(game_board, player_mark, "player");
             //Computer marks a random spot
             Random random = new Random();
-            int cpu_pos = random.nextInt(9) + 1;
-            placePiece(game_board, cpu_pos, "cpu");
+            int cpu_mark = random.nextInt(9) + 1;
+            placeMark(game_board, cpu_mark, "cpu");
 
             printGameBoard(game_board);
         }
     }
 
+    //Method for printing the game board to the console
     public static void printGameBoard(char[][] game_board) {
         for(char[] row : game_board) {
             for(char i : row) {
@@ -42,9 +47,11 @@ public class TicTacToe {
         }
     }
 
-    public static void placePiece(char[][] game_board, int pos, String user) {
+    //Method for placing marks on the board
+    public static void placeMark(char[][] game_board, int mark, String user) {
         char symbol = ' ';
 
+        //Assigns symbols for each player
         if(user.equals("player")) {
             symbol = 'X';
         }
@@ -52,7 +59,8 @@ public class TicTacToe {
             symbol = 'O';
         }
 
-        switch(pos) {
+        //Cases for each position on the board
+        switch(mark) {
             case 1:
                 game_board[0][0] = symbol;
                 break;
@@ -83,6 +91,10 @@ public class TicTacToe {
         }
     }
 
+    /*
+    Method lists win conditions and checks if either player
+    meets any of them for every mark made
+     */
     public static String checkWinner() {
         List top_row = Arrays.asList(1, 2, 3);
         List middle_row = Arrays.asList(4, 5, 6);
