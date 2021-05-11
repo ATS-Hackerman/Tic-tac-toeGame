@@ -1,5 +1,7 @@
 package tictactoe;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -78,5 +80,12 @@ public class TicTacToe {
                 game_board[4][4] = symbol;
                 break;
         }
+    }
+
+    public static String checkWinner(){
+        List top_row = Arrays.asList(1, 2, 3);
+        List middle_row = Arrays.asList(4, 5, 6);
+        List bottom_row = Arrays.asList(7, 8, 9);
+        return "";
     }
 }
