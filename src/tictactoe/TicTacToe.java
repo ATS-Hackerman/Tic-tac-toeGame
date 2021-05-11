@@ -86,6 +86,13 @@ public class TicTacToe {
         List top_row = Arrays.asList(1, 2, 3);
         List middle_row = Arrays.asList(4, 5, 6);
         List bottom_row = Arrays.asList(7, 8, 9);
+
+        List left_column = Arrays.asList(1, 4, 7);
+        List middle_column = Arrays.asList(2, 5, 8);
+        List right_column = Arrays.asList(3, 6, 9);
+
+        List diagonal1 = Arrays.asList(1, 5, 9);
+        List diagonal2 = Arrays.asList(7, 5, 3);
         return "";
     }
 }
