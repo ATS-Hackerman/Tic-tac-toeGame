@@ -19,14 +19,14 @@ public class TicTacToe {
 
         while(true) {
             System.out.println("Enter your placement (1-9):");
-            int playerPos = scan.nextInt();
+            int player_pos = scan.nextInt();
 
             //Player marks a spot
-            placePiece(game_board, playerPos, "player");
+            placePiece(game_board, player_pos, "player");
             //Computer marks a random spot
             Random random = new Random();
-            int cpuPos = random.nextInt(9) + 1;
-            placePiece(game_board, cpuPos, "cpu");
+            int cpu_pos = random.nextInt(9) + 1;
+            placePiece(game_board, cpu_pos, "cpu");
 
             printGameBoard(game_board);
         }
