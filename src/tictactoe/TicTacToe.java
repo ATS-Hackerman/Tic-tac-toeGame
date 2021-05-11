@@ -35,7 +35,8 @@ public class TicTacToe {
 
             printGameBoard(game_board);
 
-            checkWinner();
+            String result = checkWinner();
+            System.out.println(result);
         }
     }
 
@@ -56,9 +57,11 @@ public class TicTacToe {
         //Assigns symbols for each player
         if(user.equals("player")) {
             symbol = 'X';
+            player_marks.add(mark);
         }
         else if(user.equals("cpu")) {
             symbol = 'O';
+            cpu_marks.add(mark);
         }
 
         //Cases for each position on the board
