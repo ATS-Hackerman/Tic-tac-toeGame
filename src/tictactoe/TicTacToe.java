@@ -25,6 +25,10 @@ public class TicTacToe {
         while(true) {
             System.out.println("Enter your placement (1-9):");
             int player_mark = scan.nextInt();
+            while(player_marks.contains(player_mark) || cpu_marks.contains(player_mark)) {
+                System.out.println("Area taken, Enter an available area");
+                player_mark = scan.nextInt();
+            }
 
             //Player marks a spot
             placeMark(game_board, player_mark, "player");
