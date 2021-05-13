@@ -35,6 +35,9 @@ public class TicTacToe {
             //Computer marks a random spot
             Random random = new Random();
             int cpu_mark = random.nextInt(9) + 1;
+            while(player_marks.contains(cpu_mark) || cpu_marks.contains(cpu_mark)) {
+                cpu_mark = random.nextInt(9) + 1;
+            }
             placeMark(game_board, cpu_mark, "cpu");
 
             printGameBoard(game_board);
