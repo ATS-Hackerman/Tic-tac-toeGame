@@ -32,6 +32,7 @@ public class TicTacToe {
 
             //Player marks a spot
             placeMark(game_board, player_mark, "player");
+            //Checks result after player move
             String result = checkWinner();
             if(result.length() > 0) {
                 System.out.println(result);
@@ -49,6 +50,7 @@ public class TicTacToe {
 
             printGameBoard(game_board);
 
+            //Checks result after cpu move
             result = checkWinner();
             if(result.length() > 0) {
                 System.out.println(result);
