@@ -1,7 +1,7 @@
 # Tic-tac-toeGame
 
 ```diff
-Making tic-tac-toe with Java ☕
+Aided attempt at making tic-tac-toe with Java ☕
 ```
 ***
 This simple version of tic-tac-toe starts out by creating and printing
