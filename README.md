@@ -1,7 +1,7 @@
 # Tic-tac-toeGame
 
 ```diff
-Making tic-tac-toe with Java :coffee:
+Making tic-tac-toe with Java ☕
 ```
 ***
 This simple version of tic-tac-toe starts out by creating and printing
@@ -16,9 +16,9 @@ a move is made, stored, and the program checks if someone won after this
 move.
 
 These main 3 parts of the program are done with the help of the methods 
-"@@printGameBoard@@", "@@placeMark@@" and "@@checkWinner@@".
+"**printGameBoard**", "**placeMark**" and "**checkWinner**".
 
-The @@checkWinner@@ method stores all the win conditions and compares them
+The **checkWinner** method stores all the win conditions and compares them
 the stored marks (moves) of the player and the cpu, checking if any of them
 match.
 
