@@ -32,6 +32,13 @@ public class TicTacToe {
 
             //Player marks a spot
             placeMark(game_board, player_mark, "player");
+            String result = checkWinner();
+            if(result.length() > 0) {
+                System.out.println(result);
+                break;
+            }
+
+
             //Computer marks a random spot
             Random random = new Random();
             int cpu_mark = random.nextInt(9) + 1;
@@ -42,8 +49,12 @@ public class TicTacToe {
 
             printGameBoard(game_board);
 
-            String result = checkWinner();
-            System.out.println(result);
+            result = checkWinner();
+            if(result.length() > 0) {
+                System.out.println(result);
+                break;
+            }
+
         }
     }
 
