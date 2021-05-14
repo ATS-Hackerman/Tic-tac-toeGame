@@ -10,13 +10,13 @@ public class TicTacToe {
 
     public static void main(String[] args) {
         //Draws the game board
-        char[][] game_board = {{' ', '|', ' ', '|', ' '},
+        char[][] gameboard = {{' ', '|', ' ', '|', ' '},
                               {'-', '+', '-', '+', '-'},
                               {' ', '|', ' ', '|', ' '},
                               {'-', '+', '-', '+', '-'},
                               {' ', '|', ' ', '|', ' '}};
 
-        printGameBoard(game_board);
+        printGameBoard(gameboard);
 
         //Game listens
         Scanner scan = new Scanner(System.in);
@@ -31,7 +31,7 @@ public class TicTacToe {
             }
 
             //Player marks a spot
-            placeMark(game_board, player_mark, "player");
+            placeMark(gameboard, player_mark, "player");
             //Checks result after player move
             String result = checkWinner();
             if(result.length() > 0) {
@@ -46,9 +46,9 @@ public class TicTacToe {
             while(player_marks.contains(cpu_mark) || cpu_marks.contains(cpu_mark)) {
                 cpu_mark = random.nextInt(9) + 1;
             }
-            placeMark(game_board, cpu_mark, "cpu");
+            placeMark(gameboard, cpu_mark, "cpu");
 
-            printGameBoard(game_board);
+            printGameBoard(gameboard);
 
             //Checks result after cpu move
             result = checkWinner();
@@ -61,8 +61,8 @@ public class TicTacToe {
     }
 
     //Method for printing the game board to the console
-    public static void printGameBoard(char[][] game_board) {
-        for(char[] row : game_board) {
+    public static void printGameBoard(char[][] gameboard) {
+        for(char[] row : gameboard) {
             for(char i : row) {
                 System.out.print(i);
             }
@@ -71,7 +71,7 @@ public class TicTacToe {
     }
 
     //Method for placing marks on the board
-    public static void placeMark(char[][] game_board, int mark, String user) {
+    public static void placeMark(char[][] gameboard, int mark, String user) {
         char symbol = ' ';
 
         //Assigns symbols for each player
@@ -87,31 +87,31 @@ public class TicTacToe {
         //Cases for each position on the board
         switch(mark) {
             case 1:
-                game_board[0][0] = symbol;
+                gameboard[0][0] = symbol;
                 break;
             case 2:
-                game_board[0][2] = symbol;
+                gameboard[0][2] = symbol;
                 break;
             case 3:
-                game_board[0][4] = symbol;
+                gameboard[0][4] = symbol;
                 break;
             case 4:
-                game_board[2][0] = symbol;
+                gameboard[2][0] = symbol;
                 break;
             case 5:
-                game_board[2][2] = symbol;
+                gameboard[2][2] = symbol;
                 break;
             case 6:
-                game_board[2][4] = symbol;
+                gameboard[2][4] = symbol;
                 break;
             case 7:
-                game_board[4][0] = symbol;
+                gameboard[4][0] = symbol;
                 break;
             case 8:
-                game_board[4][2] = symbol;
+                gameboard[4][2] = symbol;
                 break;
             case 9:
-                game_board[4][4] = symbol;
+                gameboard[4][4] = symbol;
                 break;
         }
     }
